@@ -5,7 +5,7 @@ program test
 
     integer, parameter :: xLength = 500
     real, dimension(1:xLength) :: x, y
-    real :: integrand1, integrand2
+    real :: integrand1, integrand2, deriv
 
     call linspace(x,0.0,10.0,xLength)
 
