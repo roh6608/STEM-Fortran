@@ -19,7 +19,7 @@ module calculus
             integral = dx/2*(y(1)+y(xLength)+2*sum)
         end function
 
-        function simpsonIntegrate(x, y) result(Integral)
+        function simpsonIntegrate(x, y) result(integral)
             real, intent(in) :: x(:), y(size(x))
             real :: integral
             real :: sum = 0, dx
