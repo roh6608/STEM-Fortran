@@ -13,4 +13,4 @@ A collection of sub-routines and functions for calculus based operations. The su
 
 ## Plot Module
 A collection of sub-routines and functions for plotting operations. The sub-routines and functions are listed below.
-- ```plot2d``` This sub-routine will save a file name data.dat to the working directory, so that it can be plotted in gnuplot or other visualisation software. It accepts to arguments ```x``` and ```y```, these are both arrays of the same length.
+- ```plot2d``` This sub-routine will save a file named data.dat to the working directory, so that it can be plotted in gnuplot or other visualisation software. It accepts to arguments ```x``` and ```y```, these are both arrays of the same length.
