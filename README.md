@@ -14,3 +14,8 @@ A collection of sub-routines and functions for calculus based operations. The su
 ## Plot Module
 A collection of sub-routines and functions for plotting operations. The sub-routines and functions are listed below.
 - ```plot2d``` This sub-routine will save a file named data.dat to the working directory, so that it can be plotted in gnuplot or other visualisation software. It accepts to arguments ```x``` and ```y```, these are both arrays of the same length.
+
+## Stats Module
+A collection of sub-routines and functions for statistical operations. The sub-routines and functions are lised below.
+- ```mean``` This function will return the mean value of an input array ```x```
+- ```normalDistrubtions``` This function will return a normal distribution. It takes arguments ```x``` an input array to operate on, ```sigma``` the standard deviation of the normal distribution and ```mu``` the mean of the normal distribution.
