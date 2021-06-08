@@ -1,4 +1,5 @@
 *.o
 *.mod
-src/test
+src/test.f90
 src/testCompile.sh
+*.png
