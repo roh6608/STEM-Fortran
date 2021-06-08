@@ -10,7 +10,7 @@ module array
             
             by = (xMax - xMin) / (real(xLength) - 1)
 
-            x(1:xLength) = [(xMin + ((i-1)*by), i = 1, xLength]
+            x(1:xLength) = [(xMin + ((i-1)*by), i = 1, xLength)]
 
         end subroutine linspace
 
