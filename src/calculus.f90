@@ -3,7 +3,7 @@ module calculus
 
     contains
 
-        real function trapezoidalIntegrate(x, y) result(trapezoidalIntegrand)
+        function trapezoidalIntegrate(x, y) result(Integrand)
             real, intent(in) :: x(:), y(size(x))
             real :: integrand
             real :: sum = 0, dx 
@@ -19,7 +19,7 @@ module calculus
             integrand = dx/2*(y(1)+y(xLength)+2*sum)
         end function
 
-        real function simpsonIntegrate(x, y) result(simpsonIntegrand)
+        function simpsonIntegrate(x, y) result(Integrand)
             real, intent(in) :: x(:), y(size(x))
             real :: integrand
             real :: sum = 0, dx

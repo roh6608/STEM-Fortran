@@ -3,7 +3,7 @@ program test
     use calculus
     implicit none
 
-    integer, parameter :: xLength = 200
+    integer, parameter :: xLength = 500
     real, dimension(1:xLength) :: x, y
     real :: integrand1, integrand2
 
