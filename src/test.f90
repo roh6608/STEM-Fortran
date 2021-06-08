@@ -5,7 +5,7 @@ program test
 
     integer, parameter :: xLength = 500
     real, dimension(1:xLength) :: x, y
-    real :: integrand1, integrand2, deriv
+    real :: integrand1, integrand2, a, output
 
     call linspace(x,0.0,10.0,xLength)
 
@@ -14,8 +14,7 @@ program test
     integrand1 = trapezoidalIntegrate(x,y)
     integrand2 = simpsonIntegrate(x,y)
     print *, integrand1, integrand2
-    
-
-
 
 end program test
+
+
