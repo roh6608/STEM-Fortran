@@ -3,13 +3,40 @@ module calculus
 
     contains
 
-        pure function trapezoidalIntegrate(x, y) result(integrand)
+        real function trapezoidalIntegrate(x, y) result(trapezoidalIntegrand)
             real, intent(in) :: x(:), y(size(x))
             real :: integrand
+            real :: sum = 0, dx 
+            integer :: i, xLength
+            xLength = size(x)
+            
+            dx = (x(xLength) - x(1))/xlength
 
-            associate(n => size(x))
-                integrand = sum((y(1+1:n-0) + y(1+0:n-1))*(x(1+1:n-0) - x(1+0:n-1)))/2
-            end associate
+            do i=2,xLength-1
+                sum = sum + y(i)
+            end do
+
+            integrand = dx/2*(y(1)+y(xLength)+2*sum)
+        end function
+
+        real function simpsonIntegrate(x, y) result(simpsonIntegrand)
+            real, intent(in) :: x(:), y(size(x))
+            real :: integrand
+            real :: sum = 0, dx
+            integer :: i, xLength
+            xLength = size(x)
+
+            dx = (x(xLength) - x(1))/xlength
+
+            do i=2, xLength-1
+                if(modulo(i,2) == 0) then
+                    sum = sum + 4*y(i)
+                else
+                    sum = sum + 2*y(i)
+                end if
+            end do
+
+            integrand = dx/3*(y(1)+y(xLength)+sum)
         end function
 
 end module calculus
