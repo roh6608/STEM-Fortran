@@ -3,9 +3,9 @@ module calculus
 
     contains
 
-        function trapezoidalIntegrate(x, y) result(Integrand)
+        function trapezoidalIntegrate(x, y) result(Integral)
             real, intent(in) :: x(:), y(size(x))
-            real :: integrand
+            real :: integral
             real :: sum = 0, dx 
             integer :: i, xLength
             xLength = size(x)
@@ -16,12 +16,12 @@ module calculus
                 sum = sum + y(i)
             end do
 
-            integrand = dx/2*(y(1)+y(xLength)+2*sum)
+            integral = dx/2*(y(1)+y(xLength)+2*sum)
         end function
 
-        function simpsonIntegrate(x, y) result(Integrand)
+        function simpsonIntegrate(x, y) result(Integral)
             real, intent(in) :: x(:), y(size(x))
-            real :: integrand
+            real :: integral
             real :: sum = 0, dx
             integer :: i, xLength
             xLength = size(x)
@@ -36,7 +36,7 @@ module calculus
                 end if
             end do
 
-            integrand = dx/3*(y(1)+y(xLength)+sum)
+            integral = dx/3*(y(1)+y(xLength)+sum)
         end function
 
 end module calculus
