@@ -1,2 +1,2 @@
-# Fortran-Libraries
-A collection of Fortran libraries.
+# Fortran-Modules
+A collection of Fortran modules.
