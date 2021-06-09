@@ -97,7 +97,7 @@ module geo
 
         ! A function to return the distance along the surface of the earth, assuming it is the wgs-84 ellipsoid, using the vincenty method, taking an array as an argument
         function vincentyDistanceArray(lon,lat) result(distance)
-            real(8), intent(in), dimension(:) :: lon, lat [! [radians]
+            real(8), intent(in), dimension(:) :: lon, lat ! [radians]
             real(8), dimension(1:size(lon)) :: distance
             integer :: i
 

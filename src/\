@@ -1,0 +1,5 @@
+#!/bin/bash
+
+gfortran -c -O3 *.f90
+gfortran -o -O3 -parallel test test.f90 array.o plot.o stats.o calculus.o functions.o geo.o
+rm *.o *.mod

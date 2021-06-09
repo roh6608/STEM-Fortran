@@ -10,15 +10,17 @@ program test
     integer :: i
     real(8) :: res
 
+
     lon = lon*0.0174533
     lat = lat*0.0174533
 
+    dist = vincentyDistanceArray(lon,lat)
 
-    res = vincentyDistance(lon(1),lat(1),lon(2),lat(2))
+    do i = 1, size(dist)
 
-    print *, "Vincenty distance is",res
+        print *, i, "Vincenty distance is: ", dist(i)
 
-
+    end do
 
 
 end program test
