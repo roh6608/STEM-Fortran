@@ -3,8 +3,8 @@ module stats
     contains
 
         function mean(x)
-            real, dimension(:), intent(in) :: x
-            real :: mean, totalSum = 0
+            real(8), dimension(:), intent(in) :: x
+            real(8) :: mean, totalSum = 0
             integer :: i
             
             do i=1,size(x)
@@ -17,9 +17,9 @@ module stats
         end function mean
 
         function normalDistribution(x,sigma,mu) result(f)
-            real, intent(in), dimension(:) :: x
-            real, intent(in) :: sigma, mu
-            real, dimension(1:size(x)) :: f
+            real(8), intent(in), dimension(:) :: x
+            real(8), intent(in) :: sigma, mu
+            real(8), dimension(1:size(x)) :: f
             integer :: i
 
             do i=1,size(x)

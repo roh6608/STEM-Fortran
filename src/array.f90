@@ -4,8 +4,8 @@ module array
     contains
 
         subroutine linspace(x, xMin, xMax, xLength)
-            real, dimension(:), intent(out) :: x
-            real :: xMin, xMax, by
+            real(8), dimension(:), intent(out) :: x
+            real(8) :: xMin, xMax, by
             integer :: xLength, i
             
             by = (xMax - xMin) / (real(xLength) - 1)
