@@ -6,6 +6,27 @@ A collection of sub-routines and functions for operating with and on arrays. The
 
 - ```linspace(x, xMin, xMax, xLength)``` This subroutine will create a linearly spaced array. ```x``` is the array, ```xMin``` is the start value, ```xMax``` is the end value and ```xLength``` is the length of the array.
 
+## Vector Module
+A collection of types, sub-routines and functions for operating with and on vectors. The types, sub-routines and functions are listed below.
+- ```vec2d``` is the type that defines a 2d vector, it is defined as follows.
+
+```fortran
+        type vec2d
+            real(8) :: x, y
+        end type vec2d
+```
+- ```vec3d``` is the type that defines a 3d vector, it is defined as follows.
+
+```fortran
+        type vec3d
+            real(8) :: x, y, z
+        end type vec3d
+
+```
+- ```dotProduct2d(vec1, vec2)``` This function will return the dot product of two, 2-dimensional vectors. It takes the arguments ```vec1``` and ```vec2```, these are both of the type ```vec2d```.
+- ```dotProduct3d(vec1, vec2)``` This function will return the dot product of two, 3-dimensional vectors. It takes the arguments ```vec1``` and ```vec2```, these are both of the type ```vec3d```.
+- ```dotProductNd(vec1, vec2)``` This function will return the dot product of two, n-dimensional vectors. It takes the arguments ```vec1``` and ```vec2```, these are both arrays.
+
 ## Calculus Module
 A collection of sub-routines and functions for calculus based operations. The sub-routines and functions are listed below.
 - ```trapezoidalIntegrate``` This function will return the integral using the trapezoidal method. It takes the arguments ```x``` and ```y``` that are in the form of arrays.
