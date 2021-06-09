@@ -1,23 +1,15 @@
 program test
-    use stats
-    use array
-    use plot
+    use calculus
+    use functions
 
     implicit none
-    integer, parameter :: xLength = 100
-    real, dimension(1:xLength) :: x, y
-    real :: avg
-    integer :: i
+    real :: integral
 
-    call linspace(x,-3.0,3.0,xLength)
-    avg = mean(x)
-    
-    print *, avg
-    
-    y =  normalDistribution(x,1.0,0.0)
-    
-    print *, y    
+    ! integrating he function f1
+    integral=trapezoid_integrate(f1, 0.0, 1.0, 10000)
+    write (*,*) 'Trapezoid rule = ', integral
+    integral=simpson_integrate(f1, 0.0, 1.0, 10000)
+    write (*,*) "Simpson's rule = ", integral
 
-    call  plot2d(x,y)
 
 end program test
