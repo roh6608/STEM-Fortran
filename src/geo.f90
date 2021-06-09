@@ -1,9 +1,9 @@
 module geo
     implicit none
-
+        ! define a type for a point so that the number of input arguments can be reduced for these functions
     contains
 
-        ! A function to return a true or false for if a point lies within a circle on a flat plane
+        ! A function to return a true or false for if a point lies within a circle on a flat pla
         function pointInCircle(xp,yp,xc,yc,r) result(output)
             real(8), intent(in) :: xp, yp, xc, yc, r
             logical :: output
@@ -132,6 +132,7 @@ module geo
             end do
 
         end function vincentyDistanceArray
+
 
 
 end module geo
