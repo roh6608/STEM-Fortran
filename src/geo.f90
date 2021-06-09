@@ -31,7 +31,7 @@ module geo
 
         ! A function to return the distance along the surface of the earth, assuming it is a sphere using the haversine method, takes an array as an input
         function haversineDistanceArray(lon,lat) result(distance)
-            real(8), intent(in), dimension(:) :: lon, lat
+            real(8), intent(in), dimension(:) :: lon, lat ! [radians]
             real(8), dimension(1:size(lon)) :: distance
             integer :: i
 
@@ -43,7 +43,7 @@ module geo
 
         ! A function to return the distance along the surface of the earth, assuming it is the wgs-84 ellipsoid, using the vincenty method
         real function vincentyDistance(lon1,lat1,lon2,lat2)
-            real(8), intent(in) :: lon1, lat1, lon2, lat2
+            real(8), intent(in) :: lon1, lat1, lon2, lat2 ! [radians]
             real(8), parameter :: radius = 6378137.0 ! equatorial radius of the earth [metres]
             real(8), parameter :: f = 1/298.257223563 ! ellipsoid flattening
             real(8), parameter :: tolerance = 1e-11 ! tolerance at which to stop iterating
@@ -97,7 +97,7 @@ module geo
 
         ! A function to return the distance along the surface of the earth, assuming it is the wgs-84 ellipsoid, using the vincenty method, taking an array as an argument
         function vincentyDistanceArray(lon,lat) result(distance)
-            real(8), intent(in), dimension(:) :: lon, lat
+            real(8), intent(in), dimension(:) :: lon, lat [! [radians]
             real(8), dimension(1:size(lon)) :: distance
             integer :: i
 
