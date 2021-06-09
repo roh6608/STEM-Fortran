@@ -3,7 +3,7 @@ module functions
 contains
   real function f1(x)
     implicit none
-    real, intent(in) :: x
+    real(8), intent(in) :: x
     f1 = 1/(2*x-3)
   end function f1
 

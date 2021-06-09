@@ -3,7 +3,7 @@ module plot
     contains
 
         subroutine plot2d(x, y)
-            real, intent(in), dimension(:) :: x, y
+            real(8), intent(in), dimension(:) :: x, y
             integer :: i
             
             open(unit = 1, file = 'data.dat')

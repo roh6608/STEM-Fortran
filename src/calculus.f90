@@ -5,9 +5,9 @@ module calculus
         
         ! function for integrating an evenly spaced array of a function
         function trapezoidalIntegrate(x, y) result(Integral)
-            real, intent(in) :: x(:), y(size(x))
-            real :: integral
-            real :: sum = 0, dx 
+            real(8), intent(in) :: x(:), y(size(x))
+            real(8) :: integral
+            real(8) :: sum = 0, dx 
             integer :: i, xLength
             xLength = size(x)
             
@@ -22,9 +22,9 @@ module calculus
 
         ! function for integrating an evenly spaced array of a function
         function simpsonIntegrate(x, y) result(Integral)
-            real, intent(in) :: x(:), y(size(x))
-            real :: integral
-            real :: sum = 0, dx
+            real(8), intent(in) :: x(:), y(size(x))
+            real(8) :: integral
+            real(8) :: sum = 0, dx
             integer :: i, xLength
             xLength = size(x)
 
@@ -43,11 +43,11 @@ module calculus
 
         ! function to integrate a function defined in the functions module using the trapezoidal method
         real function trapezoid_integrate(f, a, b, n) 
-            real :: f
-            real, intent(in) ::  a, b
+            real(8) :: f
+            real(8), intent(in) ::  a, b
             integer, intent(in) :: n
             integer :: k
-            real :: s
+            real(8) :: s
             s = 0
             do k=1, n-1
             s = s + f(a + (b-a)*k/n)
@@ -57,11 +57,11 @@ module calculus
 
         ! function to integrate a function defined in the functions module using Simpson's method
         real function simpson_integrate(f, a, b, n) 
-            real :: f
-            real, intent(in) ::  a, b
+            real(8) :: f
+            real(8), intent(in) ::  a, b
             integer, intent(in) :: n
             integer :: k
-            real :: s
+            real(8) :: s
             s = 0
             do k=1, n-1
             s = s + 2**(mod(k,2)+1) * f(a + (b-a)*k/n)
