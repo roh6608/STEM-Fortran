@@ -26,7 +26,7 @@ module vector
         end function dotProduct3d
 
         ! A function to compute the dot product of two, n-dimensional vectors
-        real(8) function dotProductnd(vec1,vec2)
+        real(8) function dotProductNd(vec1,vec2)
             real(8), intent(in), dimension(:) :: vec1, vec2
             integer :: i 
 
