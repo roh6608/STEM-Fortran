@@ -69,6 +69,9 @@ module calculus
             simpson_integrate = (b-a) * (f(a) + f(b) + s) / (3*n)
         end function simpson_integrate
 
+        ! function to calculate the Reimann sum of a function in the functions module
+
+
         
 
 end module calculus

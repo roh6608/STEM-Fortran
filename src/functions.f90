@@ -4,7 +4,7 @@ contains
   real function f1(x)
     implicit none
     real, intent(in) :: x
-    f1 = sin(x)/(x+1)
+    f1 = 1/(2*x-3)
   end function f1
 
 end module functions
