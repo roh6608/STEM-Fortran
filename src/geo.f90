@@ -16,6 +16,32 @@ module geo
             end if
         end function pointInCircle
 
+        ! A function to return a true or false for if a point lies within a circle on a sphere
+        function pointInCircleHaversine(lonp,latp,lonc,latc,r) result(output)
+            real(8), intent(in) :: lonp, latp, lonc, latc, r
+            logical :: output
+            real(8) :: distance
+
+            distance = haversineDistance(lonc,latc,lonp,latp)
+
+            if(distance < r**2) then
+                output = .true.
+            end if
+        end function pointInCircleHaversine
+
+        ! A function to return a true or false for if a point lies within a circle on the WGS-84 ellipsoid
+        function pointInCircleVincenty(lonp, latp, lonc, latc, r) result(output)
+        real(8), intent(in) :: lonp, latp, lonc, latc, r
+            logical :: output
+            real(8) :: distance
+
+            distance = vincentyDistance(lonc,latc,lonp,latp)
+
+            if(distance < r**2) then
+                output = .true.
+            end if
+        end function pointInCircleVincenty
+        
         ! A function to return the distance along the surface of the earth, assuming it is a sphere using the haversine method
         real function haversineDistance(lon1, lat1, lon2, lat2)
             real(8), intent(in) :: lon1, lon2, lat1, lat2 ! [radians]
