@@ -20,18 +20,11 @@ module calculus
             integral = dx/2*(y(1)+y(xLength)+2*sum)
         end function
 
-<<<<<<< HEAD
-        function simpsonIntegrate(x, y) result(integral)
-            real, intent(in) :: x(:), y(size(x))
-            real :: integral
-            real :: sum = 0, dx
-=======
         ! function for integrating an evenly spaced array of a function
         function simpsonIntegrate(x, y) result(Integral)
             real(8), intent(in) :: x(:), y(size(x))
             real(8) :: integral
             real(8) :: sum = 0, dx
->>>>>>> bca1f0458c514240e34a23a63f7f1a0f10001ff3
             integer :: i, xLength
             xLength = size(x)
 
