@@ -11,6 +11,9 @@ A collection of sub-routines and functions for calculus based operations. The su
 - ```trapezoidalIntegrate``` This function will return the integral using the trapezoidal method. It takes the arguments ```x``` and ```y``` that are in the form of arrays.
 - ```simpsonIntegrate``` This function will return the integral using Simpson's method. It takes the arguments ```x``` and ```y``` that are in the form of arrays.
 
+## Functions Module
+A module where users define their own mathematical functions.
+
 ## Plot Module
 A collection of sub-routines and functions for plotting operations. The sub-routines and functions are listed below.
 - ```plot2d``` This sub-routine will save a file named data.dat to the working directory, so that it can be plotted in gnuplot or other visualisation software. It accepts to arguments ```x``` and ```y```, these are both arrays of the same length.
