@@ -10,6 +10,7 @@ program test
     type(vec3d) :: res
     type(vec3d) :: vec1, vec2
     real(8), dimension(1:3) :: u = (/1,1,1/), v = (/-2,2,0/), w
+    real(8) :: outp
 
     vec1 = vec3d(1,1,1)
     vec2 = vec3d(-2,2,0)
@@ -32,8 +33,9 @@ program test
     print *, "The cross product is", res
 
     w = crossProductArray(u,v)
+    outp = magnitudeArray(w)
 
-    print *, "the cross product is", w
+    print *, "the magnitude is", outp
 
 
 end program test
