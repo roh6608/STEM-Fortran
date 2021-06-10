@@ -1,6 +1,15 @@
 # STEM-Fortran
 A collection of Fortran modules and routines for math, science and engineering calculations.
 
+## Table of Contents
+- [Array Module](#array-module)
+- [Vector Module](#vector-module)
+- [Calculus Module](#calculus-module)
+- [Functions Module](#functions-module)
+- [Plot Module](#plot-module)
+- [Stats Module](#stats-module)
+- [Geo Module](#geo-module) 
+
 ## Array Module
 A collection of sub-routines and functions for operating with and on arrays. The sub-routines and functions are listed below.
 
