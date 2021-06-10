@@ -2,17 +2,20 @@ program test
     use stats
 
     implicit none
-    real(8), dimension(1:2) :: x = (/1,2/)
-    real(8) :: sd, avg
+    real(8), dimension(1:10) :: x , sorted
+    real(8) :: start, finish, med
     integer :: i
 
-    sd = standardDeviation(x)
-    avg = mean(x)
+    call random_number(x)
 
-    print *, "The standard deviation is; ", sd
-    print *, "The mean is; ", avg
+    call cpu_time(start)
+    med = median(x)
+    call cpu_time(finish)
 
     
+    print *, "The median is", med
+    print *, "The time taken is", (finish-start)
+    print *, "The size of the array is", size(x)
 
 
 
