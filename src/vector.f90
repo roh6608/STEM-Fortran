@@ -51,6 +51,35 @@ module vector
 
         end function crossProductArray
 
+        ! A function to add 2d vectors
+        function vecAdd2d(vec1, vec2) result(output)
+            type(vec2d), intent(in) :: vec1, vec2
+            type(vec2d) :: output
+
+            output = vec2d((vec1%x+vec2%x),(vec1%y+vec2%y))
+
+        end function vecAdd2d
+
+        ! A function to add 3d vectors
+        function vecAdd3d(vec1, vec2) result(output)
+            type(vec3d), intent(in) :: vec1, vec2
+            type(vec3d) :: output
+
+            output = vec3d((vec1%x+vec2%x),(vec1%y+vec2%y),(vec1%z+vec2%z))
+
+        end function vecAdd3d
+
+        ! A function to add vectors using arrays
+        function vecAddArray(vec1, vec2) result(output)
+            real(8), intent(in), dimension(:), vec1, vec2
+            real(8), dimension(1:size(vec1))
+            integer :: i
+
+            do i = 1, size(vec1)
+                output(i) = vec1(i) + vec2(i)
+            end do
+        end function vecAddArray
+
 
         
 
