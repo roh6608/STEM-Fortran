@@ -1,41 +1,19 @@
 program test
-    use geo
-    use vector
+    use stats
 
     implicit none
-    real(8), dimension(1:6) :: lon = (/ 150, 151, 152, 153, 154, 155/)
-    real(8), dimension(1:6) :: lat = (/-30, -31, -32, -33, -34, -35/)
-    real(8), dimension(1:5) :: dist
+    real(8), dimension(1:2) :: x = (/1,2/)
+    real(8) :: sd, avg
     integer :: i
-    type(vec3d) :: res
-    type(vec3d) :: vec1, vec2
-    real(8), dimension(1:3) :: u = (/1,1,1/), v = (/-2,2,0/), w
-    real(8) :: outp
 
-    vec1 = vec3d(1,1,1)
-    vec2 = vec3d(-2,2,0)
- 
+    sd = standardDeviation(x)
+    avg = mean(x)
 
+    print *, "The standard deviation is; ", sd
+    print *, "The mean is; ", avg
 
-    lon = lon*0.0174533
-    lat = lat*0.0174533
+    
 
-    dist = vincentyDistanceArray(lon,lat)
-
-    do i = 1, size(dist)
-
-        print *, i, "Vincenty distance is: ", dist(i)
-
-    end do
-
-    res = crossProduct(vec1,vec2)
-
-    print *, "The cross product is", res
-
-    w = crossProductArray(u,v)
-    outp = magnitudeArray(w)
-
-    print *, "the magnitude is", outp
 
 
 end program test
