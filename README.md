@@ -28,6 +28,9 @@ A collection of types, sub-routines and functions for operating with and on vect
 - ```dotProductNd(vec1, vec2)``` This function will return the dot product of two, n-dimensional vectors. It takes the arguments ```vec1``` and ```vec2```, these are both arrays.
 - ```crossProduct(vec1, vec2)``` This function will return the cross product of two vectors as the type of ```vec3d```. It taks the arguments of ```vec1``` and ```vec2```, these are both of the type of ```vec3d```.
 - ```crossProductArray(vec1, vec2)``` This function will return the cross product of two vectors as an array. It takes the arguments of ```vec1``` and ```vec2```, these are both arrays.
+- ```vecAdd2d(vec1, vec2)``` This function will return the addition of two 2-dimensional vectors. It takes the arguments of ```vec1``` and ```vec2```, these are both of the type ```vec2d```.
+- ```vecAdd3d(vec1, vec2)``` This function will return the addition of two 3-dimensional vectors. It takes the arguments of ```vec1``` and ```vec2```, these are both of the type ```vec3d```.
+- ```vecAddArray``` This function will return the additon of two n-dimensional vectors. It takes the arguments of ```vec1``` and ```vec2```, these are both arrays.
 
 ## Calculus Module
 A collection of sub-routines and functions for calculus based operations. The sub-routines and functions are listed below.
