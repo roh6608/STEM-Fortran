@@ -58,7 +58,7 @@ A collection of sub-routines and functions for plotting operations. The sub-rout
 ## Stats Module
 A collection of sub-routines and functions for statistical operations. The sub-routines and functions are lised below.
 - ```mean(x)``` This function will return the mean value of an input array ```x```
-- ```median(x)``` This function will return the median value of an input array ```x```. Not that currently the sorting method is extremley inefficient.
+- ```median(x)``` This function will return the median value of an input array ```x```. Note that currently the sorting method is extremley inefficient.
 - ```normalDistrubtions(x, sigma, mu)``` This function will return a normal distribution. It takes arguments ```x``` an input array to operate on, ```sigma``` the standard deviation of the normal distribution and ```mu``` the mean of the normal distribution.
 
 ## Geo Module
